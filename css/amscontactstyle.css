@@ -1,0 +1,191 @@
+/*Smooth load transition into page*/
+body {
+    animation: transitionIn 4s;
+    overflow: hidden;
+    height: 100vh;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
+
+/*Header*/
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    margin-left: 5%;
+    width: 20%;
+}
+
+header nav {
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+    margin-right: 5%;
+    z-index: 2;
+}
+
+header nav a {
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+    z-index: 2;
+}
+
+header nav a:hover {
+    color: #FF5733;
+}
+
+/*The content of the page*/
+
+h1, h2, p {
+    color: white;
+    font-family: 'Kanit', serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    width: 50%;
+    z-index: 2;
+    margin-left: 60px;
+    top: 35%;
+}
+
+
+p {
+    font-weight: 17px;
+}
+
+
+/*The form*/
+
+form {
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 350px;
+    z-index: 1;
+    position: absolute;
+    top: 60%;
+    right: 18%;
+    transform: translateY(-50%);
+    padding: 40px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Kanit', serif;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+form button {
+    width: 75px;
+    font-family: 'Kanit', serif;
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+form button:hover {
+    background-color: #FF5733;
+}
+
+/*The page background*/
+.container {
+    background-image: url('../Images/amsback.jpeg');
+    background-position: center;
+    background-size: cover;
+    margin-top: 60px;
+    display: flex;
+    z-index: -1;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+}
+
+/*Dark effect to the bacckground*/
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for darkness (0.5 means 50% opacity) */
+    z-index: 0; /* Place it behind the content */
+}
+
+/* Flex container for the images */
+.socialimages {
+    display: flex;
+    margin-top: 10px;
+    gap: 35px; /* Space between images */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+}
+
+/* Individual link container for each image */
+.socialimages a {
+    display: inline-flex; /* Flex to align image properly inside each link */
+    justify-content: center; /* Center image horizontally inside link */
+    align-items: center; /* Center image vertically inside link */
+}
+
+/* Image styling */
+.socialimages img {
+    width: 50px; /* Adjust image width */
+    height: 50px; /* Adjust image height */
+    object-fit: contain; /* Ensure images maintain aspect ratio */
+}
+
+/* For the email image */
+.small img {
+    width: 50px !important; /* Adjust the width of email icon */
+    height: 50px !important; /* Adjust the height of email icon */
+}
+
+
+
