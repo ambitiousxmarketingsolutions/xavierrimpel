@@ -1,0 +1,36 @@
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1, h3 {
+    text-align: center; 
+}
+
+.title {
+    width: fit-content;
+    display: block;
+    margin: auto;
+}
+
+header h1 {
+    font-family: 'Public Sans', serif;
+}
+
+.sub, .menu-toggle {
+    position: absolute;
+}
+
+.sub {
+    left: 5%;
+}
+
+.menu-toggle {
+    right: 5%;
+}
+
+nav {
+    display: none;
+}
