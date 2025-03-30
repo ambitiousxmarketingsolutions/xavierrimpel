@@ -1,8 +1,13 @@
+* {
+    font-family: 'Public Sans', serif;
+}
+
 header {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
+    height: 200px;
 }
 
 header h1, h3 {
@@ -16,7 +21,13 @@ header h1, h3 {
 }
 
 header h1 {
-    font-family: 'Public Sans', serif;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+header h3 {
+    font-size: 22px;
+    font-weight: 400;
 }
 
 .sub, .menu-toggle {
@@ -25,12 +36,67 @@ header h1 {
 
 .sub {
     left: 5%;
+    border: 1px solid black;
+    padding: 0.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-weight: 200;
+    pointer-events: auto;
+}
+
+.sub:hover {
+    background-color: black;
+    color: white;
 }
 
 .menu-toggle {
     right: 5%;
+    background: none;
+    border: none;
+    font-size: 25px;
+    font-weight: 700;
 }
 
 nav {
     display: none;
+}
+
+.latestblog {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+.latestblog img {
+    width: 50%;
+}
+
+.featured_text {
+    width: 50%;
+    color: white;
+    background-color: black;
+}
+
+.featured_text h1, p {
+    margin-top: 25%;
+    margin-bottom: 10%;
+    font-weight: 400;
+}
+
+.featured_text h2 {
+    width: 50%;
+    margin: auto;
+    font-size: 50px;
+}
+
+.featured_text a {
+    color: white;
+    text-decoration: underline;
+}
+
+.featured_text a:hover {
+    text-decoration: none;
 }
